@@ -5,15 +5,21 @@
     iii) Flat Top Sampling
 
 # AIM
-To simulate signal sampling using various types such as:
-i) Ideal Sampling
-ii) Natural Sampling
-iii) Flat Top Sampling
+   To simulate signal sampling using various types such as:
+   i) Ideal Sampling
+   ii) Natural Sampling
+   iii) Flat Top Sampling
 
 # SOFTWARE REQUIRED
-Google Colab
+   Google Colab
 
 # ALGORITHMS
+   1. Define parameters (sampling frequency, time vector, sine wave frequency).
+   2. Generate the input sine wave signal.
+   3. Set pulse width and initialize output arrays for sampling types.
+   4. Loop through time and sample the signal at specific intervals.
+   5. Assign sampled values for ideal, natural, and flat-top sampling.
+   6. Plot the input and sampled signals in three subplots.
 
 # PROGRAM
     import numpy as np
