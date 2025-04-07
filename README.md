@@ -82,4 +82,4 @@
 
  
 # RESULT / CONCLUSIONS
-Thus, the simulation of signal smampling using ideal sampling, natural sampling and flat-top sampling is carried out successfully.
+    Thus, the simulation of signal smampling using ideal sampling, natural sampling and flat-top sampling is carried out successfully.
