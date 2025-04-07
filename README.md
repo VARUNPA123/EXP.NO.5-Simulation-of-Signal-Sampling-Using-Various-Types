@@ -36,18 +36,18 @@
 
     # Sampling process
     for i in np.arange(0, 1, Ts):
-    idx_start = int(i * fs)
-    idx_end = min(len(t), int((i + pulse_width) * fs))
-    sample_val = np.sin(2 * np.pi * f * i)
+        idx_start = int(i * fs)
+        idx_end = min(len(t), int((i + pulse_width) * fs))
+        sample_val = np.sin(2 * np.pi * f * i)
     
-    # Ideal Sampling
-    ideal_output[idx_start] = sample_val
+        # Ideal Sampling
+        ideal_output[idx_start] = sample_val
 
-    # Natural Sampling
-    natural_output[idx_start:idx_end] = x[idx_start:idx_end]
+        # Natural Sampling
+        natural_output[idx_start:idx_end] = x[idx_start:idx_end]
 
-    # Flat-top Sampling
-    flattop_output[idx_start:idx_end] = sample_val
+        # Flat-top Sampling
+        flattop_output[idx_start:idx_end] = sample_val
 
     # Plot the results
     plt.figure(figsize=(14, 10))
