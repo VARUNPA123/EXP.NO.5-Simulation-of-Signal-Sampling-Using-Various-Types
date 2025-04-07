@@ -5,24 +5,24 @@
     iii) Flat Top Sampling
 
 # AIM
-    To simulate signal sampling using various types such as:
+To simulate signal sampling using various types such as:
        i) Ideal Sampling
        ii) Natural Sampling
        iii) Flat Top Sampling
 
 # SOFTWARE REQUIRED
-      Google Colab
+Google Colab
 
 # ALGORITHMS
-    1. Define the parameters such as sampling frequency, time vector, sine wave frequency, and pulse width for the sampling process.
-    2. Generate the sine wave signal using the defined time vector and frequency.
-    3. Initialize output arrays for ideal, natural, and flat-top sampled signals.
-    4. Loop through the time vector with a step size based on the sampling period, calculating indices for each sample.
-    5. For each sample, update the output arrays: 
+1. Define the parameters such as sampling frequency, time vector, sine wave frequency, and pulse width for the sampling process.
+2. Generate the sine wave signal using the defined time vector and frequency.
+3. Initialize output arrays for ideal, natural, and flat-top sampled signals.
+4. Loop through the time vector with a step size based on the sampling period, calculating indices for each sample.
+5. For each sample, update the output arrays: 
        - Ideal sampling assigns the sine wave value at each sampling point.
        - Natural sampling holds the signal value constant over the pulse width.
        - Flat-top sampling holds the sample value constant for the pulse width as well.
-    6. Plot the original sine wave and the three types of sampled signals in subplots to compare their behavior.
+6. Plot the original sine wave and the three types of sampled signals in subplots to compare their behavior.
 
 # PROGRAM
     import numpy as np
@@ -91,4 +91,4 @@
 
  
 # RESULT / CONCLUSIONS
-    Thus, the simulation of signal sampling using ideal sampling, natural sampling and flat-top sampling is carried out successfully.
+Thus, the simulation of signal sampling using ideal sampling, natural sampling and flat-top sampling is carried out successfully.
