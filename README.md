@@ -77,8 +77,9 @@
     plt.show()
 
 # OUTPUT
-![image](https://github.com/user-attachments/assets/93befd06-9ae4-4381-b54f-2af23a45894b)
+![image](https://github.com/user-attachments/assets/9d596b33-ab31-44f0-9838-f0c8b578f65c)
+
 
  
 # RESULT / CONCLUSIONS
-
+Thus, the simulation of signal smampling using ideal sampling, natural sampling and flat-top sampling is carried out successfully.
