@@ -19,7 +19,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
- # Parameters
+    # Parameters
 fs = 900          
 t = np.linspace(0, 1, fs) 
 f = 4.5               
@@ -29,12 +29,12 @@ fs_sample = 45
 Ts = 1 / fs_sample  
 pulse_width = 0.01  
 
- # Initialize outputs
+    # Initialize outputs
 ideal_output = np.zeros_like(t)
 natural_output = np.zeros_like(t)
 flattop_output = np.zeros_like(t)
 
- # Sampling process
+    # Sampling process
 for i in np.arange(0, 1, Ts):
     idx_start = int(i * fs)
     idx_end = min(len(t), int((i + pulse_width) * fs))
@@ -49,24 +49,24 @@ for i in np.arange(0, 1, Ts):
     # Flat-top Sampling
     flattop_output[idx_start:idx_end] = sample_val
 
- # Plot the results
+    # Plot the results
 plt.figure(figsize=(14, 10))
 
- # Ideal Sampling
+    # Ideal Sampling
 plt.subplot(3, 1, 1)
 plt.plot(t, x, 'lightgray', label="Input (Sine Wave)")
 plt.stem(t, ideal_output, 'blue', basefmt=' ', label="Ideal Sampled")
 plt.title("Ideal Sampling")
 plt.legend()
 
- # Natural Sampling
+    # Natural Sampling
 plt.subplot(3, 1, 2)
 plt.plot(t, x, 'lightgray', label="Input (Sine Wave)")
 plt.plot(t, natural_output, 'green', label="Natural Sampled")
 plt.title("Natural Sampling")
 plt.legend()
 
- # Flat-top Sampling
+    # Flat-top Sampling
 plt.subplot(3, 1, 3)
 plt.plot(t, x, 'lightgray', label="Input (Sine Wave)")
 plt.plot(t, flattop_output, 'red', label="Flat-Top Sampled")
