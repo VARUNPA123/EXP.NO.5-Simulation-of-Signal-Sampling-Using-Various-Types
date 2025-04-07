@@ -14,12 +14,15 @@
       Google Colab
 
 # ALGORITHMS
-   1. Define parameters (sampling frequency, time vector, sine wave frequency).
-   2. Generate the input sine wave signal.
-   3. Set pulse width and initialize output arrays for sampling types.
-   4. Loop through time and sample the signal at specific intervals.
-   5. Assign sampled values for ideal, natural, and flat-top sampling.
-   6. Plot the input and sampled signals in three subplots.
+    1. Define the parameters such as sampling frequency, time vector, sine wave frequency, and pulse width for the sampling process.
+    2. Generate the sine wave signal using the defined time vector and frequency.
+    3. Initialize output arrays for ideal, natural, and flat-top sampled signals.
+    4. Loop through the time vector with a step size based on the sampling period, calculating indices for each sample.
+    5. For each sample, update the output arrays: 
+       - Ideal sampling assigns the sine wave value at each sampling point.
+       - Natural sampling holds the signal value constant over the pulse width.
+       - Flat-top sampling holds the sample value constant for the pulse width as well.
+    6. Plot the original sine wave and the three types of sampled signals in subplots to compare their behavior.
 
 # PROGRAM
     import numpy as np
