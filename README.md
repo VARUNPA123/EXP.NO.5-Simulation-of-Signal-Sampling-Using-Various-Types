@@ -42,21 +42,28 @@ Google Colab
     ideal_output = np.zeros_like(t)
     natural_output = np.zeros_like(t)
     flattop_output = np.zeros_like(t)
+    impulse_train = np.zeros_like(t)
+    rectangular_pulse_train = np.zeros_like(t)
 
     # Sampling process
     for i in np.arange(0, 1, Ts):
         idx_start = int(i * fs)
         idx_end = min(len(t), int((i + pulse_width) * fs))
+        if idx_end >= len(t):
+        idx_end = len(t) - 1
+
         sample_val = np.sin(2 * np.pi * f * i)
     
         # Ideal Sampling
         ideal_output[idx_start] = sample_val
+        impulse_train[idx_start] = 1
 
         # Natural Sampling
         natural_output[idx_start:idx_end] = x[idx_start:idx_end]
 
         # Flat-top Sampling
         flattop_output[idx_start:idx_end] = sample_val
+        rectangular_pulse_train[idx_start:idx_end] = 1
 
     # Plot the results
     plt.figure(figsize=(14, 10))
@@ -77,6 +84,9 @@ Google Colab
     plt.plot(t, x, 'lightgray', label="Input (Sine Wave)")
     plt.plot(t, natural_output, 'green', label="Natural Sampled")
     plt.title("Natural Sampling")
+    plt.xlabel("Time (s)")
+    plt.ylabel("Amplitude")
+    plt.grid(True)
     plt.legend()
 
     # Flat-top Sampling
@@ -84,6 +94,9 @@ Google Colab
     plt.plot(t, x, 'lightgray', label="Input (Sine Wave)")
     plt.plot(t, flattop_output, 'red', label="Flat-Top Sampled")
     plt.title("Flat-Top Sampling")
+    plt.xlabel("Time (s)")
+    plt.ylabel("Amplitude")
+    plt.grid(True)
     plt.legend()
 
     plt.tight_layout()
