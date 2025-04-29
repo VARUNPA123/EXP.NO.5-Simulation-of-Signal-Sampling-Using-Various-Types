@@ -66,7 +66,11 @@ Google Colab
     plt.plot(t, x, 'lightgray', label="Input (Sine Wave)")
     plt.stem(t, ideal_output, 'blue', basefmt=' ', label="Ideal Sampled")
     plt.title("Ideal Sampling")
-    plt.legend()
+    plt.xlabel("Time (s)")
+    plt.ylabel("Amplitude")
+    plt.grid(True)
+    plt.legend(["Input Sine", "Ideal Sampled"])
+
 
     # Natural Sampling
     plt.subplot(3, 1, 2)
